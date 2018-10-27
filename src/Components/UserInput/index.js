@@ -1,12 +1,17 @@
 import React from 'react';
 
 const UserInput = (props) => {
+    const inputStyle = {
+        padding: '0.5rem 1rem',
+        fontSize: '1.8rem',
+        textAlign: 'center',
+        margin: '1rem',
+    }
     return(
         <div className="user-input">
-            <h2>User User Input</h2>
-            <label>What is your name?</label>
-            <input type="text" value={props.output}  onChange={props.onChangeInput}/>
-            <button onClick={props.onClickHandle}>Click Me</button>
+            <label style={inputStyle}>Enter Messege Here</label>
+            <input style={inputStyle} type="text" value={props.output}  onChange={props.onChangeInput}/>
+            <button style={inputStyle} onClick={props.onClickHandle}>Send</button>
         </div>
     );
 }

@@ -13,14 +13,14 @@ class App extends Component {
   onClickHandle = () => {
     console.log('button was clicked');
     this.setState({
-      output: this.state.input
+      output: this.state.input,
+      input: ''
     });
   }
 
   
   onChangeInput = (e) => {
     console.log('on changed fires');
-    console.log(this.prevState, "this is from prevState");
     this.setState({
         input: e.target.value
       })
@@ -36,7 +36,9 @@ class App extends Component {
               onClickHandle={this.onClickHandle}  
               onChangeInput={this.onChangeInput}
             />
-          <UserOutput output={this.state.output}/>
+          <UserOutput 
+              output={this.state.output}
+          />
         </div>  
       </div>
     );

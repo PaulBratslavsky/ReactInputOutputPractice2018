@@ -15,3 +15,8 @@
   color: white;
 }
 
+.user-input {
+  display: flex;
+  flex-direction: column;
+}
+
